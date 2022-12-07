@@ -1,0 +1,52 @@
+{% extends "travelapp/base.html" %}
+
+{% block header-right%}
+    <!-- {% include "travelapp/header_links.html" %} -->
+{% endblock %}
+
+{% block content%}
+    <div class="home">
+        <div id="description" class="section">
+            <h2>Need help figuring out to do on your next trip?</h2>
+            <p>1 Quiz, 5 Questions, All Multiple Choice</p>
+            <p>Take the 2 minute quiz below to start exploring ideas</p>
+        </div>
+        <div>
+            <a href="/quiz">
+                <button >Go to Quiz</button>
+            </a>
+        </div>
+        <div id="explanation" class="section">
+            <h2 id="section_title">How it Works</h2>
+            <span>
+                TravelMatch won't provide a specific list of things to do
+                (see </span><a class="link" href="tripadvisor.com">TripAdvisor</a><span>), but it can provide a starting point for
+                thinking about activites to research for your next trip!
+            </span>
+            <p>
+                This tool recommends and ranks 23 broad categories of activities
+                which can help you discover new travel interests.
+            </p>
+            <span>
+                We use a machine learning model to make these recommendations.
+
+                We use data which was originally collected from Google reviews, featuring
+                over 5000 users and their average ratings on attractions from 
+                23 different categories across Europe. 
+
+                This was sourced from the </span>
+                <a class="link" href="https://archive.ics.uci.edu/ml/datasets/Tarvel+Review+Ratings">UCI Machine Learning Repository</a>
+                <span>.
+            </span>
+            <p>
+                We find users that share similar interests with you based on
+                your questionaire answers, and then recommend activities that
+                these users also liked!
+            </p>
+            <p>
+                Feel free to contact me with any questions or feedback at: carolinp@andrew.cmu.edu
+            </p>
+        </div>
+        <div class="push"></div>
+    </div>
+{% endblock %}

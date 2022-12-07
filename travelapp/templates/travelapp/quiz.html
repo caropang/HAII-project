@@ -1,0 +1,188 @@
+{% extends "travelapp/base.html" %}
+
+{% block header-right%}
+    <!-- {% include "travelapp/header_links.html" %} -->
+{% endblock %}
+
+{% block content %}
+<div class="home">
+    <h2>Quiz</h2>
+    {% if error %}
+    <div id="error">{{ error }}</div>
+    <p></p>
+    {% endif %}
+    <div id="quiz" class="section">
+        <div class="post">
+            <form action="" method="POST" >
+                <div class="quiz_question">
+                    <div class="question">
+                        How interested are you in visiting art galleries?
+                    </div>
+                    <div class="scale_answer">
+                        <div class="radio_selection">
+                            <input type="radio" id="q_1" name="q_1" value="1">
+                            <label>1</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" id="q_1" name="q_1" value="2">
+                            <label>2</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" id="q_1" name="q_1" value="3">
+                            <label>3</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" id="q_1" name="q_1" value="4">
+                            <label>4</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" id="q_1" name="q_1" value="5">
+                            <label>5</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz_question">
+                    <div class="question">
+                        How interested are you in exploring restaurants?
+                    </div>
+                    <div class="scale_answer">
+                        <div class="radio_selection">
+                            <input type="radio" name="q_2" value="1">
+                            <label>1</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" name="q_2" value="2">
+                            <label>2</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" name="q_2" value="3">
+                            <label>3</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" name="q_2" value="4">
+                            <label>4</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" name="q_2" value="5">
+                            <label>5</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz_question">
+                    <div class="question">
+                        How interested are you in shopping and malls?
+                    </div>
+                    <div class="scale_answer">
+                        <div class="radio_selection">
+                            <input type="radio" name="q_3" value="1">
+                            <label>1</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" name="q_3" value="2">
+                            <label>2</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" name="q_3" value="3">
+                            <label>3</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" name="q_3" value="4">
+                            <label>4</label>
+                        </div>
+                        <div class="radio_selection">
+                            <input type="radio" name="q_3" value="5">
+                            <label>5</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz_question">
+                    <div class="question">
+                        How interested are you in dance clubs?
+                    </div>
+                    <div class="scale_answer">
+                        <div class="scale_answer">
+                            <div class="radio_selection">
+                                <input type="radio" name="q_4" value="1">
+                                <label>1</label>
+                            </div>
+                            <div class="radio_selection">
+                                <input type="radio" name="q_4" value="2">
+                                <label>2</label>
+                            </div>
+                            <div class="radio_selection">
+                                <input type="radio" name="q_4" value="3">
+                                <label>3</label>
+                            </div>
+                            <div class="radio_selection">
+                                <input type="radio" name="q_4" value="4">
+                                <label>4</label>
+                            </div>
+                            <div class="radio_selection">
+                                <input type="radio" name="q_4" value="5">
+                                <label>5</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz_question">
+                    <div class="question">
+                        How interested are you in visiting parks?
+                    </div>
+                    <div class="scale_answer">
+                        <div class="scale_answer">
+                            <div class="radio_selection">
+                                <input type="radio" name="q_5" value="1">
+                                <label>1</label>
+                            </div>
+                            <div class="radio_selection">
+                                <input type="radio" name="q_5" value="2">
+                                <label>2</label>
+                            </div>
+                            <div class="radio_selection">
+                                <input type="radio" name="q_5" value="3">
+                                <label>3</label>
+                            </div>
+                            <div class="radio_selection">
+                                <input type="radio" name="q_5" value="4">
+                                <label>4</label>
+                            </div>
+                            <div class="radio_selection">
+                                <input type="radio" name="q_5" value="5">
+                                <label>5</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="submit_button" class="submit">Submit</button>
+                {% csrf_token %}
+            </form>
+        </div>
+    </div>
+    {% if answers %}
+        <h2>Results</h2>
+        <div id="answers">
+            <div id="quiz_answers">
+                <h3>Your Answers</h3>
+                {% for answer in answers %}
+                    <p class="answer">{{ answer.0 }}: {{ answer.1 }}</p>
+                {% endfor %}
+            </div>
+            <div id="interests">
+                <h3>☺︎ Interested</h3>
+            </div>
+            <div id="filters">
+                <h3>☹︎ Not Interested</h3>
+            </div>
+        </div>
+        
+        <h3>Our Recommendations</h3>
+        <p id="b">Use the "Interested" and "Not Interested" buttons to recalibrate the</p>
+        <p id="t">recommendations and get more accurate results</p>
+        <table id="recommendations"></table>
+        <script defer>
+            window.onload=loadResults
+        </script>
+    {% endif %}
+
+</div>
+{% endblock %}

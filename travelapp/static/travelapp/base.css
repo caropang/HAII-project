@@ -1,0 +1,196 @@
+/* Base styling  */
+
+html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex-shrink: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    background-color: rgb(231, 243, 255);
+    border-radius: 100px;
+    font-size: medium;
+    padding: .5em;
+    cursor: pointer;
+    border:2px solid rgb(125, 149, 175);
+}
+
+.submit {
+    margin-top: 1em;
+}
+
+.link {
+    text-decoration: underline;
+}
+#id_site_name {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#id_header_div {
+    margin: 0;
+    margin-bottom: 24px;
+    background: rgb(231, 243, 255);
+    padding: 10vw;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#id_header_right {
+    display: flex;
+    flex-direction: row;
+}
+
+.home {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+.content {
+    padding: 20px;
+    min-height: 100%;
+    margin: 0 auto -50px;
+}
+
+.footer, .push {
+    height: 50px;
+}
+
+.footer {
+    margin-bottom: -50px;
+    /* padding-top: 10em; */
+    padding-left: 10vw;
+    padding-right: 10-vw;
+}
+
+/* Header link styling  */
+
+.icon {
+    width: 32px;
+    margin: 5px;
+}
+
+.icon_link {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.header_link {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.link_text {
+    margin: 0;
+}
+
+.quiz_question {
+    margin-bottom: 0.5em;
+}
+
+.answer {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#answers {
+    display: flex;
+    flex-direction: row;
+}
+
+#quiz_answers {
+    margin-right: 3em;
+}
+
+#filters {
+    margin-right: 3em;
+}
+
+#interests {
+    margin-right: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    border:1px solid black;
+    border-radius: 20px;
+}
+
+#recommendations {
+    margin-bottom: 5em;
+}
+
+.rec {
+    font-size: larger;
+    margin-bottom: 3px;
+}
+
+.category {
+    margin-right: 1em;
+}
+
+.radio_selection {
+    display: inline-block;
+    text-align: center;
+  }
+
+.radio_selection label {
+    display: block;
+  }
+
+.feedback {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete {
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+
+#b {
+    margin-bottom: 0;
+}
+
+#t {
+    margin-top: 0;
+}

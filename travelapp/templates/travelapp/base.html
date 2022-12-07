@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    {% load static %}
+		<link href="/static/travelapp/base.css" rel="stylesheet" type="text/css">
+		<script src="/static/travelapp/main.js"></script>
+        <title> {% block title %} TravelMatch {% endblock %} </title>
+    </head>
+    <body>
+        <div id="id_header_div">
+            <div id="id_header_left">
+                <p id="id_site_name">
+                    <a href="/">TravelMatch ✈︎</a>
+                </p>
+            </div>
+            <div id="id_header_right">
+                {% block header-right%}
+                {% endblock %}
+            </div>
+        </div>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="footer">
+            <p>Caroline Pang ✧ 2022 ✧ Created for 05-351 Human-AI Interaction</p>
+        </div>
+    </body>
+</html>
