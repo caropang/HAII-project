@@ -1,5 +1,18 @@
 # HAII-project
 
+### Installation
+To preview the project, clone this repository
+
+`$ git clone https://github.com/caropang/HAII-project.git`
+
+Then, run the following commands from the root directory 
+
+`$ python3 manage.py migrate`
+
+`$ python3 manage.py runserver`
+
+Then, navigate to "http://127.0.0.1:8000/" in your browser
+
 ### Implementation
 This project was built on top of the Django framework. The machine learning aspects were handled using the scikit-learn and pandas libraries. All of the additional code in this repository was implemented by me.
 
