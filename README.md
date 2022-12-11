@@ -14,7 +14,9 @@ Then, run the following commands from the root directory
 Then, navigate to "http://127.0.0.1:8000/" in your browser
 
 ### Implementation
-This project was built on top of the Django framework. The machine learning aspects were handled using the scikit-learn and pandas libraries. All of the additional code in this repository was implemented by me.
+This project was built on top of the Django framework. The machine learning aspects were handled using the scikit-learn and pandas libraries. 
+
+All of the additional code in this repository was implemented by me. The primary changes can be found in `/travelapp/views.py` (ML implementation and actions), `/travelapp/static/travelapp` (CSS and JS files), and `/travelapp/templates/travelapp` (HTML files).
 
 This project actually uses the KNNImputer from the sklearn library to make predictions. I was initially going to train a KNN multi-output regressor. However, in order to be able to adapt to user feedback, the number of inputs and outputs has to be variable which is not possible with a single pre-trained regressor. Although more computationally intensive, the KNNImputer is better suited for this application because it computes the "missing values" ie. values that we want to predict based on all of the data that is available. Therefore, if a user indicates interest or disinterest in certain categories, we can easily take this into account.
 
